@@ -1,113 +1,111 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import FirstSection from "./components/FirstSection";
+import SecondSection from "./components/SecondSection";
 
-export default function Home() {
+const page = () => {
+  // type data = {
+  //   CardData: {
+  //     id: number;
+  //     title: string;
+  //     totalEvents: number;
+  //     sport: string;
+  //     imgURL: string;
+  //   };
+  //   ticketCardData: {
+  //     id: number;
+  //     title: string;
+  //     date: string;
+  //     day: string;
+  //     time: string;
+  //     addres: string;
+  //     imgURL: string;
+  //   };
+  //   adsdata: {
+  //     title: string;
+  //     disc: string;
+  //     img: string;
+  //   };
+  // };
+
+  // const data: any = {
+  //   ticketCardData: [
+  //     {
+  //       id: 1,
+  //       title: "Las Vegas Aviators",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Las Vegas Ballpark, Las Vegas, Nevada",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SMcy78xquYbaN8LDV49nkGXXnYs6VzJ5LHDiCoZHdvTnvdmhJEgHiu4-QkzPxG1IxGfnAoKtD9zDv-jhFQqpi7wNJlIiAspvtA7Wp4RNHO7nRxid5NLwFXYPjabVtQrN8AQv7b7uNBsxg8ikgHUxAY0~A6LEmTyJfJsfM3ke8c2TOlT3jIfkx6KKZQ2fry3wskWhztiE~B2XjvOJlE417Ld8WIUWo6xCE-E0u1MVjqGqP8s~g0hMbqjZFh2JvEpbh1cWjTimArviIO6RbPEhfjMEdC6zo7LtCuE-XEanZFycRZ1gBXrnfoiLBDoeCkq6lRCYVeMHAngb8~0wbKgGUw__",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Sacramento River Cats",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Sutter Health Park, Sacramento, california",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/3de4/4e83/b6e3aeda879dc6f22f94711c788789b5?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EZo-HQ4yJRY~dUhQcMhA~35ZvUBoWGsttz-dbuwWCwNS-iagfxSXy8D0wUbI7E0DtSys0IP8ys-zbJuneStuL89zYqwmiiGVmsdfbrviRd6~-DGtSY7jg9VG35saVyEF3V~BTigA4UsAzQEEkcd7ssgXdLgzvSXbjHkkD6JEvWERD5g2nyW5VhZrl2r2c451ij7Z3hZ6tp6eC9J-Ld638EcfKZDBYQt5iGlni8bR8zqaj4JSsszlF5aJkYBI0ldvKZIGpVnBoHqM0813dNDn7gMb~NO7LRoH0DSqjqp6BgcRPG37D07lph~ZABSka-tuFZeA8LfLOvJ2yX06qmNe1A__",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Las Vegas Aviators",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Las Vegas Ballpark, Las Vegas, Nevada",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SMcy78xquYbaN8LDV49nkGXXnYs6VzJ5LHDiCoZHdvTnvdmhJEgHiu4-QkzPxG1IxGfnAoKtD9zDv-jhFQqpi7wNJlIiAspvtA7Wp4RNHO7nRxid5NLwFXYPjabVtQrN8AQv7b7uNBsxg8ikgHUxAY0~A6LEmTyJfJsfM3ke8c2TOlT3jIfkx6KKZQ2fry3wskWhztiE~B2XjvOJlE417Ld8WIUWo6xCE-E0u1MVjqGqP8s~g0hMbqjZFh2JvEpbh1cWjTimArviIO6RbPEhfjMEdC6zo7LtCuE-XEanZFycRZ1gBXrnfoiLBDoeCkq6lRCYVeMHAngb8~0wbKgGUw__",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Las Vegas Aviators",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Las Vegas Ballpark, Las Vegas, Nevada",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SMcy78xquYbaN8LDV49nkGXXnYs6VzJ5LHDiCoZHdvTnvdmhJEgHiu4-QkzPxG1IxGfnAoKtD9zDv-jhFQqpi7wNJlIiAspvtA7Wp4RNHO7nRxid5NLwFXYPjabVtQrN8AQv7b7uNBsxg8ikgHUxAY0~A6LEmTyJfJsfM3ke8c2TOlT3jIfkx6KKZQ2fry3wskWhztiE~B2XjvOJlE417Ld8WIUWo6xCE-E0u1MVjqGqP8s~g0hMbqjZFh2JvEpbh1cWjTimArviIO6RbPEhfjMEdC6zo7LtCuE-XEanZFycRZ1gBXrnfoiLBDoeCkq6lRCYVeMHAngb8~0wbKgGUw__",
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "Sacramento River Cats",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Sutter Health Park, Sacramento, california",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/3de4/4e83/b6e3aeda879dc6f22f94711c788789b5?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EZo-HQ4yJRY~dUhQcMhA~35ZvUBoWGsttz-dbuwWCwNS-iagfxSXy8D0wUbI7E0DtSys0IP8ys-zbJuneStuL89zYqwmiiGVmsdfbrviRd6~-DGtSY7jg9VG35saVyEF3V~BTigA4UsAzQEEkcd7ssgXdLgzvSXbjHkkD6JEvWERD5g2nyW5VhZrl2r2c451ij7Z3hZ6tp6eC9J-Ld638EcfKZDBYQt5iGlni8bR8zqaj4JSsszlF5aJkYBI0ldvKZIGpVnBoHqM0813dNDn7gMb~NO7LRoH0DSqjqp6BgcRPG37D07lph~ZABSka-tuFZeA8LfLOvJ2yX06qmNe1A__",
+  //     },
+  //     {
+  //       id: 6,
+  //       title: "Las Vegas Aviators",
+  //       date: "OCT 15",
+  //       day: "SUN",
+  //       time: "4:30 PM",
+  //       addres: "Las Vegas Ballpark, Las Vegas, Nevada",
+  //       imgURL:
+  //         "https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SMcy78xquYbaN8LDV49nkGXXnYs6VzJ5LHDiCoZHdvTnvdmhJEgHiu4-QkzPxG1IxGfnAoKtD9zDv-jhFQqpi7wNJlIiAspvtA7Wp4RNHO7nRxid5NLwFXYPjabVtQrN8AQv7b7uNBsxg8ikgHUxAY0~A6LEmTyJfJsfM3ke8c2TOlT3jIfkx6KKZQ2fry3wskWhztiE~B2XjvOJlE417Ld8WIUWo6xCE-E0u1MVjqGqP8s~g0hMbqjZFh2JvEpbh1cWjTimArviIO6RbPEhfjMEdC6zo7LtCuE-XEanZFycRZ1gBXrnfoiLBDoeCkq6lRCYVeMHAngb8~0wbKgGUw__",
+  //     },
+  //   ],
+  //   adsdata: [
+  //     {
+  //       title: "Advertisement title",
+  //       disc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //       img: "https://s3-alpha-sig.figma.com/img/c724/731e/f71497e0e3af85c77fa47046bb1f23cb?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hcDBsK4weZt8Xn5qj6nW8PTyWjQF1Ymo3AzKkf3fCp6fQb7wmw~4sv-jZgjj2REupfgw5yS-SwfYk3A4t0wrVY1tVvRCH7F4OzJ5wQ83JakPCLZPqzn6Ynqmue2ZJZDvWgdj1CrL866iG-pQEEe1XhvAxxI3UJHKlaf73ywWPaE-x8h1u1KVKYrv8FQrWpykUFhPezF~CbfHlogCgsbE3V5xX1CIefiL~TlA3Xen2NReAER6Vcu59wxu3JDwvdgTxHZcDF02o9B4tBOCcoD~XwQa~pdiYueAL9IDyTG4Nt~U4fyuD75ahnDhmZMr2syPwmukRa-XkKhA87TRNz5~tQ__",
+  //     },
+  //   ],
+  // };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className="w-full min-h-screen px-[3%] py-[7%] lg:py-[3%] xl:px-[5%] bg-zinc-50 dark:bg-darkMC dark:text-white">
+      <FirstSection />
+      <SecondSection />
+    </div>
   );
-}
+};
+
+export default page;

@@ -13,8 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'inter': ["Inter", "system-ui"],
+        'poppins': ["Poppins", "system-ui"],
+      },
+      colors: {
+        'darkMC': '#292B32',
+        'buttonC': '#2C9CF0',
+        'darkCC': '#3B3E47',
+        'gredientT': '#18282A',
+        'gredientB': '#221A2C',
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };
 export default config;
