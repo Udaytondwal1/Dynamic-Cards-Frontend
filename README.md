@@ -1,3 +1,26 @@
+<h1 align="center" id="title">Dynamic Cards - Frontend (Assignment by Hexleap)</h1>
+
+
+<h2>🚀 Demo</h2>
+
+[https://ip-address-tracker-one-sigma.vercel.app/](https://ip-address-tracker-one-sigma.vercel.app/)
+
+ 
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   React.js
+*   NEXT.js
+*   TypeScript
+*   Tailwind CSS
+
+<h2>💖Like my work?</h2>
+
+Please give Star if you Like it. Contact Me for any Queries/Issue.<p>https://www.instagram.com/udaytondwal/</p>
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
