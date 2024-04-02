@@ -12,7 +12,7 @@ const AdCard: FC<any> = ({ items }) => {
         </div>
       </div>
       <div className="text-sm px-5 mt-4">
-        <h2 className="font-semibold my-[3%] text-[17px] text-xl">
+        <h2 className="font-semibold my-[3%] text-[17px] text-lg">
           {items.title}
         </h2>
         <p>{items.disc}</p>
