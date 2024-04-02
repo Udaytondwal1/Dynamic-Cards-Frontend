@@ -3,7 +3,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://ip-address-tracker-one-sigma.vercel.app/](https://ip-address-tracker-one-sigma.vercel.app/)
+[https://dynamic-cards-frontend.vercel.app/](https://dynamic-cards-frontend.vercel.app/)
 
  
   
